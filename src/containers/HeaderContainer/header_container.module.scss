@@ -1,0 +1,7 @@
+@import "../../styles/styles.scss";
+
+.header_container {
+  @include phone {
+    margin-bottom: 3rem;
+  }
+}

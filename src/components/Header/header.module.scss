@@ -1,0 +1,165 @@
+@import "../../styles/styles.scss";
+
+.header {
+  background: url("../../assets/header_background.svg") no-repeat;
+  background-size: contain;
+  flex-direction: column;
+  height: 100vh;
+  background-position-y: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+
+  @include desktop_hd {
+    background-position-y: -70px;
+  }
+
+  @include desktop {
+    background-position-y: -10px;
+  }
+
+  @include tablet {
+    background-position-y: 100px;
+  }
+
+  @include phone {
+    background: url("../../assets/header_background_mobile.svg") no-repeat;
+    background-size: contain;
+    height: 100%;
+    background-position-y: 20px;
+  }
+
+  &__heroImage {
+    img {
+      width: 100%;
+    }
+
+    @include phone {
+      order: 1;
+    }
+  }
+
+  &__description {
+    text-align: left;
+    line-height: 3rem;
+    position: relative;
+
+    @include phone {
+      line-height: 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+
+    h1 {
+      font-weight: bold;
+      @include phone {
+        color: $white;
+      }
+    }
+
+    &_mainTitle {
+      font-size: 2.5rem;
+      font-weight: bold;
+
+      @include phone {
+        font-size: 1.5rem;
+      }
+
+      @include tablet {
+        width: 400px;
+        margin-left: 2rem;
+      }
+    }
+
+    span,
+    button {
+      background: $gray;
+      color: $white;
+    }
+
+    span {
+      @include slanted_text;
+      margin-top: 0.3rem;
+
+      &:first-child {
+        padding: 0 0.5rem;
+
+        @include phone {
+          padding: 0 0.3rem 0 0.5rem;
+        }
+      }
+
+      &:last-child {
+        padding: 0 0.5rem;
+        margin-left: 5px;
+
+        @include phone {
+        }
+      }
+    }
+
+    button {
+      border-radius: 10px;
+      text-transform: uppercase;
+      border: 2px solid transparent;
+      display: block;
+      font-size: 1.5rem;
+
+      padding: 5px 0;
+      width: 350px;
+      position: absolute;
+      left: 30px;
+      top: 270px;
+      box-shadow: 0px 4px 5px -2px $black-shadow;
+      -webkit-box-shadow: 0px 4px 5px -2px $black-shadow;
+      -moz-box-shadow: 0px 4px 5px -2px $black-shadow;
+
+      &:hover {
+        background: $white;
+        border-color: $primaryColor;
+        transition: all 0.3s ease-in-out;
+        color: $primaryColor;
+      }
+
+      @include phone {
+        display: none;
+      }
+
+      @include tablet {
+        left: 20%;
+        top: 220px;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    margin-top: 5rem;
+    gap: 4rem;
+    grid-template-columns: 520px auto;
+    align-items: center;
+    justify-content: center;
+
+    @include phone {
+      grid-template-rows: auto auto;
+      width: 85%;
+      gap: 0;
+      grid-template-columns: 1fr;
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      width: 75%;
+      margin-top: 0;
+      gap: 1rem;
+    }
+  }
+}

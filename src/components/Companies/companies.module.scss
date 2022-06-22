@@ -1,0 +1,104 @@
+@import "../../styles/styles.scss";
+
+.companies {
+  span {
+    @include slanted_text;
+    background: $gray;
+    color: $white;
+    padding: 0 2.5rem 0 0.5rem;
+
+    @include phone {
+      padding: 0.1rem 2.5rem 0.1rem 0.5rem;
+    }
+  }
+
+  h4 {
+    margin-left: 4rem;
+
+    @include phone {
+      width: 50%;
+      margin: 0;
+      padding: 1rem 0 1rem 4rem;
+    }
+  }
+
+  p {
+    width: 90%;
+    margin: auto;
+
+    @include phone {
+      font-size: 0.9rem;
+      width: 70%;
+    }
+
+    @include tablet {
+      width: 75%;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 40% calc(60% - 0.5rem);
+
+    @include phone {
+      grid-template-columns: 1fr;
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__comments {
+    display: grid;
+    grid-template-rows: 47% 53%;
+    grid-template-columns: 50% 80%;
+    background-size: contain;
+    // gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+
+    @include phone {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    &_item {
+      &:last-child img {
+        height: 74%;
+
+        @include phone {
+          height: 100%;
+        }
+      }
+
+      @include tablet {
+        text-align: center;
+      }
+
+      img {
+        @include phone {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
