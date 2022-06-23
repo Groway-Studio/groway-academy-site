@@ -18,6 +18,11 @@
     background: none;
     grid-template-columns: 1fr;
     position: unset;
+    padding: 0;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
   }
 
   * {
@@ -30,6 +35,10 @@
 
     @include phone {
       position: unset;
+    }
+
+    @include tablet {
+      top: -280px;
     }
   }
 
@@ -73,8 +82,8 @@
   &__fields {
     @include phone {
       background: $gray-light;
-
       margin: auto;
+      border-radius: 10px;
       padding: 2rem;
     }
     label {

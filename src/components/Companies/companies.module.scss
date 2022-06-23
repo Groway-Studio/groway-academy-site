@@ -1,19 +1,6 @@
 @import "../../styles/styles.scss";
 
 .companies {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-
-  @include phone {
-    height: 100%;
-  }
-
-  @include tablet {
-    height: 100%;
-  }
-
   span {
     @include slanted_text;
     background: $gray;
@@ -51,21 +38,30 @@
 
   &__content {
     display: grid;
-    grid-template-columns: 40% calc(60% - 0.5rem);
+    width: 60%;
+    margin: auto;
+    align-items: center;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 60px);
 
     @include phone {
       grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 30px);
+      gap: 2rem;
+      width: 40%;
     }
 
     @include tablet {
       grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 40px);
     }
   }
 
-  &__image {
-    img {
-      width: 100%;
-    }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   &__comments {

@@ -37,6 +37,13 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 2rem;
+  @include phone {
+    font-size: 1.3rem;
+  }
+}
+
 a {
   text-decoration: none;
 }

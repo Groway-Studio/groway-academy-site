@@ -7,7 +7,13 @@ const Companies = () => {
         Nuestros instructores <span>trabajan en:</span>
       </h2>
       <div className={styles.companies__content}>
-        <div className={styles.companies__image}></div>
+        <img src="./src/assets/companies/uber.png" alt="Uber" />
+        <img src="./src/assets/companies/globant.png" alt="Globant" />
+        <img
+          src="./src/assets/companies/mercado-libre.png"
+          alt="Mercado Libre"
+        />
+        <img src="./src/assets/companies/rappi.png" alt="Rappi" />
       </div>
     </section>
   );

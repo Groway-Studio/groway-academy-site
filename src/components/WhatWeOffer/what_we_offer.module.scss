@@ -51,10 +51,10 @@
   h3 {
     @include flex_center;
     color: $gray-dark;
-    font-size: 2rem;
     height: 80px;
     @include tablet {
       height: 100px;
+      width: 60%;
     }
   }
 

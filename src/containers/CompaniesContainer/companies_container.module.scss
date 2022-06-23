@@ -1,3 +1,18 @@
+@import "../../styles/styles.scss";
+
 .companies_container {
-  padding: 1rem 0;
+  height: 100vh;
+  padding: 1rem 0 10rem 0;
+  display: grid;
+  align-items: center;
+
+  @include phone {
+    height: 100%;
+    padding: 1rem 0;
+  }
+
+  @include tablet {
+    height: 100%;
+    padding: 1rem 0 20rem 0;
+  }
 }
