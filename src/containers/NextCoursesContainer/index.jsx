@@ -3,9 +3,9 @@ import styles from "./next_courses_container.module.scss";
 
 const NextCoursesContainer = () => {
   return (
-    <div className={styles.next_courses_container}>
+    <section className={styles.next_courses_container}>
       <NextCourses />
-    </div>
+    </section>
   );
 };
 

@@ -1,6 +1,19 @@
 @import "../../styles/styles.scss";
 
 .companies {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+
+  @include phone {
+    height: 100%;
+  }
+
+  @include tablet {
+    height: 100%;
+  }
+
   span {
     @include slanted_text;
     background: $gray;

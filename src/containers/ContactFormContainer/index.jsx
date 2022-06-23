@@ -1,10 +1,11 @@
 import { ContactForm } from "../../components";
+import styles from "./contact_form_container.module.scss";
 
 const ContactFormContainer = () => {
   return (
-    <div>
+    <section className={styles.contact_form_container}>
       <ContactForm />
-    </div>
+    </section>
   );
 };
 

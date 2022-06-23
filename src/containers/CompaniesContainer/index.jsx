@@ -3,9 +3,9 @@ import styles from "./companies_container.module.scss";
 
 const CompaniesContainer = () => {
   return (
-    <div className={styles.companies_container}>
+    <section className={styles.companies_container}>
       <Companies />
-    </div>
+    </section>
   );
 };
 
