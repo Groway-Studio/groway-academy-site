@@ -1,5 +1,7 @@
 import styles from "./what_you_will_learn.module.scss";
 
+import TechnologiesListImage from "../../assets/what-you-will-learn/technologies.svg";
+
 const WhatYouWillLearn = () => {
   return (
     <section className={styles.what_you_will_learn}>
@@ -7,7 +9,7 @@ const WhatYouWillLearn = () => {
         Tecnologías que puedes <span>aprender con nosotros</span>
       </h2>
       <img
-        src="./src/assets/what-you-will-learn/technologies.svg"
+        src={TechnologiesListImage}
         alt="Tecnologías"
       />
     </section>

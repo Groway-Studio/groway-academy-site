@@ -1,6 +1,8 @@
 import Navbar from "../Navbar";
 import styles from "./header.module.scss";
 
+import TeamImage from "../../assets/team.svg";
+
 const Header = () => {
   return (
     <header className={styles.header}>
@@ -15,7 +17,7 @@ const Header = () => {
         </div>
         <div className={styles.header__heroImage}>
           <img
-            src="./src/assets/team.svg"
+            src={TeamImage}
             alt="Groway.Studio"
             draggable={false}
           />
