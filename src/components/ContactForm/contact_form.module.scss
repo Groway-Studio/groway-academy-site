@@ -1,0 +1,138 @@
+@import "../../styles/styles.scss";
+
+.contact_form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  background: $gray-light;
+  border-radius: 10px;
+  align-items: flex-end;
+  width: 85%;
+  padding: 2rem 4rem;
+  gap: 2rem;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+
+  @include phone {
+    background: none;
+    grid-template-columns: 1fr;
+    position: unset;
+  }
+
+  * {
+    color: $blue-3;
+  }
+
+  &__main_image {
+    position: absolute;
+    top: -160px;
+
+    @include phone {
+      position: unset;
+    }
+  }
+
+  &__info {
+    h3 {
+      font-size: 3rem;
+      margin: 0;
+
+      @include phone {
+        font-size: 2.4rem;
+        text-align: center;
+      }
+    }
+
+    small {
+      display: block;
+      font-size: 0.9rem;
+      margin-top: 6px;
+
+      @include phone {
+        text-align: center;
+        width: 90%;
+        margin: 0.5rem auto 0;
+      }
+    }
+  }
+
+  &__social_media {
+    margin-top: 2rem;
+    img {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+
+    @include phone {
+      display: none;
+    }
+  }
+
+  &__fields {
+    @include phone {
+      background: $gray-light;
+
+      margin: auto;
+      padding: 2rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+
+      @include phone {
+        margin-bottom: 5px;
+      }
+
+      &:not(:first-child) {
+        margin-top: 1rem;
+
+        @include phone {
+          margin-top: 0.6rem;
+        }
+      }
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      border: none;
+      background: $gray-dark-2;
+      border-radius: 10px;
+    }
+
+    label,
+    input,
+    textarea {
+      font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    textarea {
+      padding: 0.6rem 0.5rem;
+    }
+
+    input[type="submit"] {
+      display: block;
+      margin: 1rem 0 0 auto;
+      background: $blue-2;
+      color: $white;
+      border: 3px solid transparent;
+      border-radius: 10px;
+      font-size: 1.4rem;
+      padding: 0.1rem 2rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: $white;
+        color: $blue-3;
+        border-color: $blue-3;
+      }
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+}

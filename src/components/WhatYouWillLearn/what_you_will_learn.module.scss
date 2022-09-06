@@ -1,0 +1,32 @@
+@import "../../styles/styles.scss";
+
+.what_you_will_learn {
+  display: grid;
+
+  @include phone {
+    height: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    width: 100%;
+
+    @include phone {
+      order: 2;
+    }
+  }
+  span {
+    @include slanted_text;
+    background: $gray;
+    color: $white;
+    padding: 0 2rem 0 0.5rem;
+
+    @include phone {
+      padding: 0.1rem 2rem 0.1rem 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<svg
+  width="1440"
+  height="258"
+  viewBox="0 0 1440 258"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M-10 207.966V94.3916L1450 78.0001V177.519L1447.79 213.791C1360.62 235.345 1095.06 293.402 795.764 226.952C539.388 170.031 410.794 148.564 121.004 191.474C73.3873 198.524 29.7658 203.909 -10 207.966Z"
+    fill="black"
+  />
+  <rect x="-10" width="1460" height="98" fill="black" />
+</svg>

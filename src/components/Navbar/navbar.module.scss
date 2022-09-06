@@ -1,0 +1,155 @@
+@import "../../styles/styles.scss";
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  color: $white;
+  top: 0;
+  padding: 2rem 0;
+  width: 100%;
+
+  @include phone {
+    background: $black;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  @include tablet {
+    background: $black;
+  }
+
+  &__logo {
+    @include phone {
+      width: 30%;
+      margin-left: 1.5rem;
+      order: -1;
+    }
+
+    @include tablet {
+      width: 20%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__options {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    @include phone {
+      flex-direction: column;
+      // margin-right: 1rem;
+    }
+
+    &_item {
+      font-style: italic;
+      font-size: 1.3rem;
+
+      @include phone {
+        display: none;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @include tablet {
+        font-size: 1.1rem;
+      }
+
+      &:not(:nth-child(4)) {
+        margin-right: 2rem;
+
+        @include tablet {
+          margin-right: 1rem;
+        }
+
+        @include phone {
+          margin: 0;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: $white;
+        width: 100%;
+      }
+    }
+  }
+
+  &__burger {
+    &_menu {
+      order: 2;
+      display: none;
+      margin-right: 1.5rem;
+      z-index: 100;
+
+      @include phone {
+        display: block;
+      }
+    }
+
+    &_line {
+      width: 35px;
+      height: 4px;
+      background: $white;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @include phone {
+    display: flex;
+
+    order: 2;
+  }
+
+  &__show {
+    background: $black;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 200;
+    width: 100%;
+    text-align: center;
+    animation: myAnimation 0.2s linear 0s 1 normal forwards;
+    transition: all 0.5s cubic-bezier(0.26, 0.59, 0.83, 0.67);
+
+    li {
+      display: flex;
+      align-items: center;
+      font-style: normal;
+      font-size: 1rem;
+
+      &:hover {
+        background: $white;
+      }
+
+      a {
+        padding: 0.5rem;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+@keyframes myAnimation {
+  0% {
+    transform: translateY(-40px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
