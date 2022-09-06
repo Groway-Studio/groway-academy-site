@@ -14,13 +14,15 @@ jobs:
           npm install
           npm install vite
           npm install -g vite
+          yarn install
+          yarn add vite
         env:
           NODE_ENV: production
           APP_ENV: production
       
       - name: Build
         run: |
-          vite build
+          yarn build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.6
