@@ -1,5 +1,9 @@
 import styles from "./what_we_offer.module.scss";
 
+import ProgrammerIllustration from "../../assets/what-we-offer/programmer.svg";
+import BootcampsIllustration from "../../assets/what-we-offer/bootcamps.svg";
+import CertificationIllustration from "../../assets/what-we-offer/certification.svg";
+
 const WhatWeOffer = () => {
   return (
     <section className={styles.what_we_offer} id="servicios">
@@ -10,7 +14,7 @@ const WhatWeOffer = () => {
       <div className={styles.cards_container}>
         <div className={styles.what_we_offer__card_item}>
           <img
-            src="./src/assets/what-we-offer/programmer.svg"
+            src={ProgrammerIllustration}
             alt="Programas In-House para tu empresa"
             draggable={false}
           />
@@ -23,7 +27,7 @@ const WhatWeOffer = () => {
         </div>
         <div className={styles.what_we_offer__card_item}>
           <img
-            src="./src/assets/what-we-offer/bootcamps.svg"
+            src={BootcampsIllustration}
             alt="Bootcamps y cursos abiertos"
             draggable={false}
           />
@@ -35,7 +39,7 @@ const WhatWeOffer = () => {
         </div>
         <div className={styles.what_we_offer__card_item}>
           <img
-            src="./src/assets/what-we-offer/certification.svg"
+            src={CertificationIllustration}
             alt="Lorem Ipsum Dolor"
             draggable={false}
           />
