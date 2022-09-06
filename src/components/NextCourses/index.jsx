@@ -1,5 +1,8 @@
 import styles from "./next_courses.module.scss";
 
+import PythonLogo from "../../assets/next-courses/python.svg";
+import NodeLogo from "../../assets/next-courses/node.svg";
+
 const NextCourses = () => {
   return (
     <section className={styles.next_courses}>
@@ -9,7 +12,7 @@ const NextCourses = () => {
       <div className={styles.next_courses__content}>
         <div>
           <img
-            src="./src/assets/next-courses/python.svg"
+            src={PythonLogo}
             alt="Python"
             draggable={false}
           />
@@ -24,7 +27,7 @@ const NextCourses = () => {
         </div>
         <div>
           <img
-            src="./src/assets/next-courses/node.svg"
+            src={NodeLogo}
             alt="Node"
             draggable={false}
           />

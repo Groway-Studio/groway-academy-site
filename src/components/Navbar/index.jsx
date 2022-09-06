@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./navbar.module.scss";
 
+import GrowayLogo from "../../assets/groway.svg";
+
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [width, setWidth] = useState(0);
@@ -31,7 +33,7 @@ const Navbar = () => {
 
       <div className={styles.navbar__logo}>
         <img
-          src="./src/assets/groway.svg"
+          src={GrowayLogo}
           alt="Groway Studio"
           draggable={false}
         />

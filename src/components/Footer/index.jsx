@@ -3,12 +3,13 @@ import styles from "./footer.module.scss";
 import InstagramIcon from "../../assets/social-media/dark/instagram.svg";
 import LinkedinIcon from "../../assets/social-media/dark/linkedin.svg";
 import FacebookIcon from "../../assets/social-media/dark/facebook.svg";
+import GrowayLogo from "../../assets/groway.svg";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__logo}>
-        <img src="./src/assets/groway.svg" alt="Groway Studio" />
+        <img src={GrowayLogo} alt="Groway Studio" />
       </div>
       <div className={styles.footer__contact}>
         Escríbenos a: <a href="mailto:hola@groway.studio">hola@groway.studio</a>
