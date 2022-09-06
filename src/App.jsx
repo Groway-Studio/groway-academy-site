@@ -3,12 +3,12 @@ import {
   HeaderContainer,
   WhatYouWillLearnContainer,
   WhatWeOfferContainer,
-  CompaniesContainer,
   NextCoursesContainer,
+  // CompaniesContainer,
+  // ContactFormContainer,
 } from "./containers";
 
 import styles from "./App.module.scss";
-import ContactFormContainer from "./containers/ContactFormContainer";
 
 const App = () => {
   return (
@@ -18,8 +18,8 @@ const App = () => {
         <WhatWeOfferContainer />
         <NextCoursesContainer />
         <WhatYouWillLearnContainer />
-        <CompaniesContainer />
-        <ContactFormContainer />
+        {/* <CompaniesContainer /> */}
+        {/* <ContactFormContainer /> */}
       </div>
       <FooterContainer />
     </div>

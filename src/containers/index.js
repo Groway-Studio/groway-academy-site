@@ -4,6 +4,7 @@ import WhatYouWillLearnContainer from "./WhatYouWillLearnContainer";
 import WhatWeOfferContainer from "./WhatWeOfferContainer";
 import NextCoursesContainer from "./NextCoursesContainer";
 import CompaniesContainer from "./CompaniesContainer";
+import ContactFormContainer from "./ContactFormContainer";
 
 export {
   FooterContainer,
@@ -12,4 +13,5 @@ export {
   WhatWeOfferContainer,
   CompaniesContainer,
   NextCoursesContainer,
+  ContactFormContainer,
 };
