@@ -1,5 +1,9 @@
 import styles from "./footer.module.scss";
 
+import InstagramIcon from "../../assets/social-media/dark/instagram.svg";
+import LinkedinIcon from "../../assets/social-media/dark/linkedin.svg";
+import FacebookIcon from "../../assets/social-media/dark/facebook.svg";
+
 const Footer = () => {
   return (
     <footer className={styles.footer}>
@@ -9,9 +13,9 @@ const Footer = () => {
       <div className={styles.footer__contact}>
         Escríbenos a: <a href="mailto:hola@groway.studio">hola@groway.studio</a>
         <div className={styles.footer__socialMedia}>
-          <img src="./src/assets/social-media/instagram.svg" alt="Instagram" />
-          <img src="./src/assets/social-media/linkedin.svg" alt="Linkdein" />
-          <img src="./src/assets/social-media/facebook.svg" alt="Facebook" />
+          <img src={InstagramIcon} alt="Instagram" />
+          <img src={LinkedinIcon} alt="Linkdein" />
+          <img src={FacebookIcon} alt="Facebook" />
         </div>
       </div>
       <div className={styles.footer__address}>
@@ -35,9 +39,9 @@ const Footer = () => {
         <a href="tel:+5715800311">+57 15 800311</a>
       </div>
       <div className={styles.footer__socialMediaPhone}>
-        <img src="./src/assets/social-media/instagram.svg" alt="Instagram" />
-        <img src="./src/assets/social-media/linkedin.svg" alt="Linkdein" />
-        <img src="./src/assets/social-media/facebook.svg" alt="Facebook" />
+        <img src={InstagramIcon} alt="Instagram" />
+        <img src={LinkedinIcon} alt="Linkdein" />
+        <img src={FacebookIcon} alt="Facebook" />
       </div>
     </footer>
   );
