@@ -11,6 +11,7 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
 
   return {
+    base: "http://groway.academy"
     plugins: [react()],
     define: {
       __APP_ENV__: env.APP_ENV
