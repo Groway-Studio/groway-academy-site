@@ -6,7 +6,7 @@ const WhatYouWillLearn = () => {
   return (
     <section className={styles.what_you_will_learn}>
       <h2>
-        Tecnologías que puedes <span>aprender con nosotros</span>
+        Tecnologías que podrás <span>aprender con nosotros</span>
       </h2>
       <img
         src={TechnologiesListImage}
