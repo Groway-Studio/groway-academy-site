@@ -1,11 +1,16 @@
 import styles from "./contact_form.module.scss";
 
+import CustomAttention from "../../assets/contact-form/personalized_attention.svg";
+import InstagramIcon from "../../assets/social-media/dark/instagram.svg";
+import LinkedinIcon from "../../assets/social-media/dark/linkedin.svg";
+import FacebookIcon from "../../assets/social-media/dark/facebook.svg";
+
 const ContactForm = () => {
   return (
     <form className={styles.contact_form}>
       <div className={styles.contact_form__info}>
         <img
-          src="./src/assets/contact-form/personalized_attention.svg"
+          src={CustomAttention}
           alt="Atención personalizada"
           className={styles.contact_form__main_image}
         />
@@ -16,15 +21,15 @@ const ContactForm = () => {
         </small>
         <div className={styles.contact_form__social_media}>
           <img
-            src="./src/assets/social-media/dark/instagram.svg"
+            src={InstagramIcon}
             alt="Instagram"
           />
           <img
-            src="./src/assets/social-media/dark/linkedin.svg"
+            src={LinkedinIcon}
             alt="Linkdein"
           />
           <img
-            src="./src/assets/social-media/dark/facebook.svg"
+            src={FacebookIcon}
             alt="Facebook"
           />
         </div>
