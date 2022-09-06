@@ -12,13 +12,14 @@ jobs:
       - name: Install 🔧
         run: |
           npm install
+          npm install vite
           npm install -g vite
         env:
           NODE_ENV: production
       
       - name: Build
         run: |
-          npm run build
+          vite build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.6
