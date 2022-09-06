@@ -1,1 +1,1 @@
-# groway-education-website
+# Groway Academy
