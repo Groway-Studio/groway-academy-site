@@ -7,5 +7,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 0;
+  padding: 2rem 0;
+
+  @include phone {
+    padding: 4rem 0;
+  }
+
+  @include tablet {
+    padding: 3rem 0;
+  }
 }
