@@ -147,6 +147,8 @@
     grid-template-columns: 520px auto;
     align-items: center;
     justify-content: center;
+    max-width: 1024px;
+    width: 90%;
 
     @include phone {
       grid-template-rows: auto auto;

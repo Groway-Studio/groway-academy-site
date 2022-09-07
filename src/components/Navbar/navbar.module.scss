@@ -3,21 +3,24 @@
 .navbar {
   align-items: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   position: absolute;
   color: $white;
   top: 0;
   padding: 2rem 0;
-  width: 100%;
+  width: 90%;
+  max-width: 1024px;
 
   @include phone {
     background: $black;
-    justify-content: space-between;
     padding: 1rem 0;
+    width: 100%;
   }
 
   @include tablet {
     background: $black;
+    width: 100%;
+    padding: 2rem 3rem;
   }
 
   &__logo {
