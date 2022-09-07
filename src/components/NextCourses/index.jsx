@@ -27,7 +27,13 @@ const NextCourses = () => {
           </a>
         </div>
         <div>
-          <p>Próximamente...</p>
+          <div></div>
+          <h2></h2>
+          <p></p>
+          <p></p>
+          <p></p>
+
+          <a href="#">----------</a>
         </div>
       </div>
     </section>
