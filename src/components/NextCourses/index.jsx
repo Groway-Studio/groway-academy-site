@@ -23,7 +23,7 @@ const NextCourses = () => {
             atque corrupti nesciunt.
           </p>
 
-          <button>Más Info</button>
+          <a href="https://aprendepython.groway.studio/?fbclid=IwAR1Rs5k041EjFUbJX87Y5k346B7sLUswVr08vrZazSGjoyxz1PiOPilPGIU" target="_blank">Más Info</a>
         </div>
         <div>
           <img
@@ -38,7 +38,7 @@ const NextCourses = () => {
             atque corrupti nesciunt.
           </p>
 
-          <button>Más Info</button>
+          <a>Más Info</a>
         </div>
       </div>
     </section>
