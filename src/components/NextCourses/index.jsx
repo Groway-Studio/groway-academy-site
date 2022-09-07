@@ -19,7 +19,10 @@ const NextCourses = () => {
             atque corrupti nesciunt.
           </p>
 
-          <a href="https://aprendepython.groway.studio/" target="_blank">
+          <a
+            href="https://aprendepython.groway.studio/?fbclid=IwAR1Rs5k041EjFUbJX87Y5k346B7sLUswVr08vrZazSGjoyxz1PiOPilPGIU"
+            target="_blank"
+          >
             Más Info
           </a>
         </div>
