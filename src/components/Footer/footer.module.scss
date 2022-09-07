@@ -1,45 +1,38 @@
 @import "../../styles/styles.scss";
 
 .footer {
-  width: 85%;
+  width: 90%;
+  max-width: 1024px;
   display: grid;
   gap: 2rem;
-  align-items: flex-start;
-  grid-template-columns: auto 15% auto auto auto auto;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  align-items: center;
 
   @include phone {
-    grid-template-rows: auto repeat(3, 1fr);
     grid-template-columns: none;
-    grid-template-areas:
-      "logo contact"
-      "address address"
-      "country_name country_name";
-
-    gap: 1rem;
-
-    width: 80%;
+    gap: 1.25rem;
+    max-width: 334px;
   }
 
   @include tablet {
     gap: 1rem;
-
     grid-template-columns: repeat(3, auto);
   }
 
   &__logo {
-    @include phone {
-      grid-area: logo;
-    }
+    max-width: 200px;
+
     img {
       width: 100%;
+    }
+
+    @include phone {
+      max-width: 130px;
     }
   }
 
   &__contact {
-    @include phone {
-      grid-area: contact;
-    }
-
     a {
       font-weight: bold;
 
@@ -49,57 +42,43 @@
     }
   }
 
-  & * {
-    color: $white;
-  }
-
   &__socialMedia,
-  &__socialMediaPhone {
-    img {
-      &:not(:last-child) {
-        margin-right: 1rem;
-      }
+  img {
+    &:not(:last-child) {
+      margin-right: 1rem;
     }
   }
 
   &__socialMedia {
     display: flex;
-    margin-top: 1rem;
+    gap: 1rem;
 
     @include phone {
-      display: none;
-    }
-  }
-
-  &__socialMediaPhone {
-    display: none;
-
-    @include phone {
-      display: block;
+      justify-content: center;
     }
   }
 
   &__address {
+    display: none;
+
+    p,
+    span {
+      color: #fff;
+    }
+
     @include phone {
-      grid-area: address;
+      display: block;
+    }
+
+    @include tablet {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
     }
   }
 
   &__country_name {
     font-weight: bold;
     margin: 0 auto 0.4rem 0;
-
-    @include phone {
-      grid-area: country_name;
-    }
-  }
-
-  &__phone_numbers {
-    p {
-      font-weight: bold;
-    }
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
   }
 }
