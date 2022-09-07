@@ -38,7 +38,7 @@ const NextCourses = () => {
             atque corrupti nesciunt.
           </p>
 
-          <button>Más Info</button>
+          <a>Más Info</a>
         </div>
       </div>
     </section>
