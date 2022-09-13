@@ -4,6 +4,7 @@ import {
   WhatYouWillLearnContainer,
   WhatWeOfferContainer,
   NextCoursesContainer,
+  // OpinionsContainer,
   // CompaniesContainer,
   // ContactFormContainer,
 } from "./containers";
@@ -20,6 +21,7 @@ const App = () => {
         <WhatYouWillLearnContainer />
         {/* <CompaniesContainer /> */}
         {/* <ContactFormContainer /> */}
+        {/* <OpinionsContainer /> */}
       </div>
       <FooterContainer />
     </div>

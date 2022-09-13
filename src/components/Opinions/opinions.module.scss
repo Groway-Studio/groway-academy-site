@@ -1,0 +1,17 @@
+@import "../../styles/styles.scss";
+
+.opinions {
+  &__title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+  }
+
+  &__content {
+    overflow-x: scroll;
+    &_list {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, auto);
+    }
+  }
+}

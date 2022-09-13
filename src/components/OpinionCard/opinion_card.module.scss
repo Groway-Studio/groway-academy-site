@@ -1,0 +1,39 @@
+@import "../../styles/styles.scss";
+
+.opinion__card {
+  display: flex;
+  list-style: none;
+  padding: 1rem;
+  width: 380px;
+
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(150deg, #263238 0%, #00000000 95%) 1;
+  background: #f5f5f5;
+
+  &_content {
+    width: 70%;
+    img {
+      width: 1.3rem;
+      object-fit: contain;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 100;
+    }
+  }
+
+  &_profile {
+    background: #e6e6e6;
+    border-radius: 50%;
+    width: 30%;
+
+    &_picture {
+      display: block;
+      height: 90%;
+      margin: auto;
+      object-fit: contain;
+      width: 80%;
+    }
+  }
+}
