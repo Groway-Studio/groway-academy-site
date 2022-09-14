@@ -58,6 +58,10 @@
           width: 80%;
           height: 3.5rem;
           margin: 1rem auto;
+
+          @include phone {
+            width: 200px;
+          }
         }
 
         span {
@@ -65,8 +69,16 @@
           transform: unset;
           margin: 0 auto 0.3rem;
 
+          @include phone {
+            margin-bottom: 0.8rem;
+          }
+
           &:nth-of-type(1) {
             width: 75%;
+
+            @include phone {
+              margin-top: 0.8rem;
+            }
           }
 
           &:nth-of-type(2) {
@@ -75,6 +87,10 @@
 
           &:nth-of-type(3) {
             width: 65%;
+
+            @include phone {
+              margin-bottom: 1.5rem;
+            }
           }
         }
 
@@ -120,6 +136,10 @@
       margin: 0 auto;
       margin: 1rem auto;
       width: 80%;
+
+      @include phone {
+        line-height: 1.5rem;
+      }
     }
 
     a {

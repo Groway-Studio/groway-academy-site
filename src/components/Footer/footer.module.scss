@@ -10,8 +10,8 @@
   align-items: center;
 
   @include phone {
-    grid-template-columns: none;
-    gap: 1.25rem;
+    grid-template-columns: repeat(2, calc(50% - 0.5rem));
+    gap: 1rem;
     max-width: 334px;
   }
 
@@ -35,6 +35,7 @@
   &__contact {
     a {
       font-weight: bold;
+      line-height: 0;
 
       @include tablet {
         display: block;
@@ -68,6 +69,8 @@
 
     @include phone {
       display: block;
+      grid-column: 1 / -1;
+      order: 3;
     }
 
     @include tablet {
