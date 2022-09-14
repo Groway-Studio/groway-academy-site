@@ -2,4 +2,8 @@
 
 .what_you_will_learn_container {
   padding: 4rem 0;
+
+  @include phone {
+    padding: 0 0 2rem;
+  }
 }

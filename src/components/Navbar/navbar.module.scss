@@ -13,8 +13,10 @@
 
   @include phone {
     background: $black;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     width: 100%;
+    align-items: flex-start;
+    height: 20rem;
   }
 
   @include tablet {
@@ -96,12 +98,12 @@
     }
 
     &_line {
-      width: 35px;
-      height: 4px;
+      width: 1.5rem;
+      height: 2px;
       background: $white;
 
       &:not(:last-child) {
-        margin-bottom: 10px;
+        margin-bottom: 0.45rem;
       }
     }
   }
@@ -116,7 +118,7 @@
     background: $black;
     margin: 0;
     position: absolute;
-    top: 100%;
+    top: 20%;
     z-index: 200;
     width: 100%;
     text-align: center;
