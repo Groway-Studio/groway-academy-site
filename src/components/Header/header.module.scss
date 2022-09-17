@@ -5,18 +5,14 @@
   background-size: contain;
   flex-direction: column;
   height: 100vh;
-  background-position-y: -50px;
+  background-position-y: 7rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: relative;
 
   @include desktop_hd {
-    background-position-y: -70px;
-  }
-
-  @include desktop {
-    background-position-y: -10px;
+    background-position-y: -90px;
   }
 
   @include tablet {
@@ -27,7 +23,7 @@
     background: url("../../assets/header_background_mobile.svg") no-repeat;
     background-size: contain;
     height: 100%;
-    background-position-y: 10rem;
+    background-position-y: 15rem;
   }
 
   &__heroImage {
@@ -64,7 +60,7 @@
     }
 
     &_mainTitle {
-      font-size: 2.5rem;
+      font-size: 1.9rem;
       font-weight: bold;
 
       @include phone {
@@ -142,9 +138,9 @@
 
   &__content {
     display: grid;
-    margin-top: 5rem;
-    gap: 4rem;
-    grid-template-columns: 520px auto;
+    margin-top: 0;
+    gap: 1rem;
+    grid-template-columns: calc(415px - 0.5rem) calc(100% - 415px - 0.5rem);
     align-items: center;
     justify-content: center;
     max-width: 1024px;

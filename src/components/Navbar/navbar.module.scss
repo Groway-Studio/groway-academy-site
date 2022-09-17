@@ -1,12 +1,23 @@
 @import "../../styles/styles.scss";
 
 .navbar {
+  &__container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: $black;
+    height: 10rem;
+
+    @include phone {
+      height: 15rem;
+    }
+  }
+
   align-items: center;
   display: flex;
   justify-content: space-between;
-  position: absolute;
+  margin: 0 auto;
   color: $white;
-  top: 0;
   padding: 2rem 0;
   width: 90%;
   max-width: 1024px;
@@ -26,8 +37,10 @@
   }
 
   &__logo {
+    width: 8rem;
+
     @include phone {
-      width: 30%;
+      width: 8rem;
       margin-left: 1.5rem;
       order: -1;
     }
@@ -48,12 +61,10 @@
 
     @include phone {
       flex-direction: column;
-      // margin-right: 1rem;
     }
 
     &_item {
-      font-style: italic;
-      font-size: 1.3rem;
+      font-size: 1rem;
 
       @include phone {
         display: none;
@@ -118,11 +129,11 @@
     background: $black;
     margin: 0;
     position: absolute;
-    top: 20%;
+    top: 5rem;
     z-index: 200;
     width: 100%;
     text-align: center;
-    animation: myAnimation 0.2s linear 0s 1 normal forwards;
+    animation: myAnimation 0.1s linear 0s 1 normal forwards;
     transition: all 0.5s cubic-bezier(0.26, 0.59, 0.83, 0.67);
 
     li {
@@ -151,7 +162,7 @@ input[type="checkbox"] {
 
 @keyframes myAnimation {
   0% {
-    transform: translateY(-40px);
+    transform: translateY(-1.5rem);
   }
 
   100% {
