@@ -11,6 +11,10 @@
     @include phone {
       height: 15rem;
     }
+
+    @include tablet {
+      height: 15rem;
+    }
   }
 
   align-items: center;
