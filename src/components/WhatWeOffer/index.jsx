@@ -21,8 +21,7 @@ const WhatWeOffer = () => {
 
           <h3>Programas In-House para tu empresa</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni nam,
-            facilis dicta, excepturi perspiciatis.
+            Prepara a tu equipo en las tecnologías más demandadas del mercado y mejora la productividad de tu empresa, con nuestros programas personalizados y diseñados a medida.
           </p>
         </div>
         <div className={styles.what_we_offer__card_item}>
@@ -33,8 +32,7 @@ const WhatWeOffer = () => {
           />
           <h3>Bootcamps y cursos abiertos</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni nam,
-            facilis dicta, excepturi perspiciatis.
+            Aprende de programación web, desarrollo móvil, bases de datos, data science, UX/UI y más.
           </p>
         </div>
         <div className={styles.what_we_offer__card_item}>
