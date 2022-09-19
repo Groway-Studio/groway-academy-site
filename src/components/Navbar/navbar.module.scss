@@ -2,42 +2,39 @@
 
 .navbar {
   &__container {
-    z-index: -100;
-    width: 100%;
-    position: absolute;
-    top: 0;
     background: $black;
     height: 10rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
 
     @include phone {
       height: 15rem;
     }
 
     @include tablet {
-      height: 17rem;
+      height: 25rem;
     }
   }
 
   align-items: center;
+  color: $white;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  color: $white;
+  max-width: 1024px;
   padding: 2rem 0;
   width: 90%;
-  max-width: 1024px;
 
   @include phone {
-    background: $black;
-    padding: 1.5rem 0;
-    width: 100%;
     align-items: flex-start;
-    height: 20rem;
+    max-width: 334px;
+    padding: 1.5rem 0;
   }
 
   @include tablet {
     background: $black;
-    width: 100%;
+
     padding: 2rem 3rem;
   }
 
@@ -45,13 +42,7 @@
     width: 8rem;
 
     @include phone {
-      width: 8rem;
-      margin-left: 1.5rem;
       order: -1;
-    }
-
-    @include tablet {
-      width: 20%;
     }
 
     img {
@@ -103,9 +94,8 @@
 
   &__burger {
     &_menu {
-      order: 2;
       display: none;
-      margin-right: 1.5rem;
+      order: 2;
       z-index: 100;
 
       @include phone {
@@ -131,15 +121,16 @@
   }
 
   &__show {
+    animation: myAnimation 0.1s linear 0s 1 normal forwards;
     background: $black;
     margin: 0;
+    max-width: 334px;
     position: absolute;
-    top: 5rem;
-    z-index: 200;
-    width: 100%;
     text-align: center;
-    animation: myAnimation 0.1s linear 0s 1 normal forwards;
+    top: 5rem;
     transition: all 0.5s cubic-bezier(0.26, 0.59, 0.83, 0.67);
+    width: 100%;
+    z-index: 200;
 
     li {
       display: flex;
