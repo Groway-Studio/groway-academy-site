@@ -21,7 +21,9 @@ const WhatWeOffer = () => {
 
           <h3>Programas In-House para tu empresa</h3>
           <p>
-            Prepara a tu equipo en las tecnologías mas competitivas y mejora la productividad de tu empresa con nuestros programas personalizados y diseñados a medida.
+            Prepara a tu equipo en las tecnologías más competitivas y mejora la
+            productividad de tu empresa con nuestros programas personalizados y
+            diseñados a medida.
           </p>
         </div>
         <div className={styles.what_we_offer__card_item}>
@@ -32,7 +34,8 @@ const WhatWeOffer = () => {
           />
           <h3>Cursos Especializados</h3>
           <p>
-            Aprende de programación web, desarrollo móvil, bases de datos, data science, UX/UI en profundidad con nuestros cursos especializados.
+            Aprende de programación web, desarrollo móvil, bases de datos, data
+            science, UX/UI en profundidad con nuestros cursos especializados.
           </p>
         </div>
         <div className={styles.what_we_offer__card_item}>
@@ -44,7 +47,8 @@ const WhatWeOffer = () => {
 
           <h3>Bootcamps</h3>
           <p>
-            Preparacion intensiva y practica usando las tecnologias mas demandadas del mercado con enfoque en empleabilidad inmediata.
+            Preparación intensiva y práctica usando las tecnologías más
+            demandadas del mercado con enfoque en empleabilidad inmediata.
           </p>
         </div>
       </div>

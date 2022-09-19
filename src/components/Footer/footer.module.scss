@@ -21,14 +21,10 @@
   }
 
   &__logo {
-    max-width: 200px;
+    width: 8rem;
 
     img {
       width: 100%;
-    }
-
-    @include phone {
-      max-width: 130px;
     }
   }
 
