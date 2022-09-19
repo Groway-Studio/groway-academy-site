@@ -13,12 +13,19 @@
   }
 
   img {
-    width: 100%;
+    width: 65%;
+    margin: auto;
 
     @include phone {
       order: 2;
+      width: 100%;
+    }
+
+    @include tablet {
+      width: 80%;
     }
   }
+
   span {
     @include slanted_text;
     background: $gray;
