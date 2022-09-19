@@ -21,7 +21,7 @@ const WhatWeOffer = () => {
 
           <h3>Programas In-House para tu empresa</h3>
           <p>
-            Prepara a tu equipo en las tecnologías más demandadas del mercado y mejora la productividad de tu empresa, con nuestros programas personalizados y diseñados a medida.
+            Prepara a tu equipo en las tecnologías mas competitivas y mejora la productividad de tu empresa con nuestros programas personalizados y diseñados a medida.
           </p>
         </div>
         <div className={styles.what_we_offer__card_item}>
@@ -30,7 +30,7 @@ const WhatWeOffer = () => {
             alt="Bootcamps y cursos abiertos"
             draggable={false}
           />
-          <h3>Bootcamps y cursos abiertos</h3>
+          <h3>Cursos abiertos</h3>
           <p>
             Aprende de programación web, desarrollo móvil, bases de datos, data science, UX/UI y más.
           </p>
@@ -38,14 +38,13 @@ const WhatWeOffer = () => {
         <div className={styles.what_we_offer__card_item}>
           <img
             src={CertificationIllustration}
-            alt="Lorem Ipsum Dolor"
+            alt="Bootcamps"
             draggable={false}
           />
 
-          <h3>Lorem Ipsum Dolor</h3>
+          <h3>Bootcamps</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni nam,
-            facilis dicta, excepturi perspiciatis.
+            Preparacion intensiva y practica usando las tecnologias mas demandadas del mercado con enfoque en empleabilidad inmediata.
           </p>
         </div>
       </div>
