@@ -30,9 +30,9 @@ const WhatWeOffer = () => {
             alt="Bootcamps y cursos abiertos"
             draggable={false}
           />
-          <h3>Cursos abiertos</h3>
+          <h3>Cursos Especializados</h3>
           <p>
-            Aprende de programación web, desarrollo móvil, bases de datos, data science, UX/UI y más.
+            Aprende de programación web, desarrollo móvil, bases de datos, data science, UX/UI en profundidad con nuestros cursos especializados.
           </p>
         </div>
         <div className={styles.what_we_offer__card_item}>
