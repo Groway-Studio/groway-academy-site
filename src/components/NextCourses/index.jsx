@@ -5,7 +5,7 @@ import PythonLogo from "../../assets/next-courses/python.svg";
 
 const NextCourses = () => {
   return (
-    <section className={styles.next_courses}>
+    <section className={styles.next_courses} id="next-courses">
       <h2>
         Próximos <span>cursos abiertos</span>
       </h2>
@@ -35,9 +35,12 @@ const NextCourses = () => {
           <span></span>
           <span></span>
 
-          <a href="#"></a>
+          <a href="#next-courses"></a>
         </div>
       </div>
+      <a href="#next-courses" className={styles.next_courses__all}>
+        Ver Todos
+      </a>
     </section>
   );
 };
