@@ -1,0 +1,42 @@
+@import "../../styles/styles.scss";
+
+.sidebar_filters {
+  width: 100%;
+  display: grid;
+  gap: 1.5rem;
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    text-align: left;
+    margin-left: 1rem;
+  }
+
+  &__form {
+    padding: 1rem;
+    border-radius: 10px;
+    background: #e0e0e0;
+    display: grid;
+    gap: 0.5rem;
+
+    &_filter {
+      h3 {
+        font-weight: 500;
+        font-size: 1rem;
+        margin: 0;
+      }
+    }
+
+    &_group {
+      input {
+        display: inline-block;
+        margin: 0 0.5rem 0 1.2rem;
+      }
+
+      label {
+        font-weight: 400;
+      }
+    }
+  }
+}

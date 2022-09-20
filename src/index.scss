@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 @import "./styles/styles.scss";
 
 html {
@@ -6,13 +8,11 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   background: $white;
 }
 
 * {
+  font-family: "Poppins", sans-serif;
   color: $primaryColor;
   box-sizing: border-box;
 }
@@ -39,4 +39,20 @@ h2 {
 
 a {
   text-decoration: none;
+}
+
+.navbar__container {
+  background: $black;
+  height: 10rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  @include phone {
+    height: 15rem;
+  }
+
+  @include tablet {
+    height: 25rem;
+  }
 }

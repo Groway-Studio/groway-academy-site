@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__logo}>
-        <img src={GrowayLogo} alt="Groway Studio" />
+        <img src={GrowayLogo} alt="Groway Studio" draggable={false} />
       </div>
       <div className={styles.footer__address}>
         <p className={styles.footer__country_name}>Perú</p>

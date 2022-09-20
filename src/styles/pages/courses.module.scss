@@ -1,0 +1,43 @@
+@import "../styles.scss";
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.navbar {
+  background-image: url("../../assets/header_background_2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -1rem;
+  height: 20rem;
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+
+  @include phone {
+    background-position: 0 -11rem;
+  }
+
+  @include tablet {
+    background-position: 0 -3rem;
+  }
+}
+
+.container {
+  @include base;
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 15rem calc(100% - 16rem);
+  height: 100vh;
+  z-index: 100;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+}

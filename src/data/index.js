@@ -28,3 +28,31 @@ export const fakeCustomers = [
     profilePicture: user,
   },
 ];
+
+export const filtersData = [
+  { title: "Nivel", options: ["Principiante", "Medio", "Experimentado"] },
+  {
+    title: "Precio",
+    options: ["$0 - $30", "$30 - $60", "$60 - $100", "+ $100"],
+  },
+  { title: "Tecnología", options: ["Python", "JavaScript", "PHP"] },
+];
+
+export const courses_by_category = [
+  {
+    title: "Todas las categorías",
+    value: "",
+  },
+  {
+    title: "Curso",
+    value: "curso",
+  },
+  {
+    title: "Bootcamp",
+    value: "bootcamp",
+  },
+  {
+    title: "Webinar",
+    value: "webminar",
+  },
+];

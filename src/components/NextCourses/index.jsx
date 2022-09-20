@@ -35,7 +35,7 @@ const NextCourses = () => {
           <span></span>
           <span></span>
 
-          <a href="#next-courses"></a>
+          <a></a>
         </div>
       </div>
       <a href="#next-courses" className={styles.next_courses__all}>

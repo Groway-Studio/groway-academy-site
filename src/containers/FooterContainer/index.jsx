@@ -1,9 +1,9 @@
 import Footer from "../../components/Footer";
 import styles from "./footer_container.module.scss";
 
-const FooterContainer = () => {
+const FooterContainer = ({ className = "" }) => {
   return (
-    <div className={styles.footer__container}>
+    <div className={`${styles.footer__container} ${className}`}>
       <Footer />
     </div>
   );
