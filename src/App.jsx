@@ -1,31 +1,15 @@
-import {
-  FooterContainer,
-  HeaderContainer,
-  WhatYouWillLearnContainer,
-  WhatWeOfferContainer,
-  NextCoursesContainer,
-  // OpinionsContainer,
-  // CompaniesContainer,
-  // ContactFormContainer,
-} from "./containers";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import styles from "./App.module.scss";
+import { CoursesPage, HomePage } from "./pages";
 
-const App = () => {
-  return (
-    <div className="App">
-      <HeaderContainer />
-      <div className={styles.container}>
-        <WhatWeOfferContainer />
-        <NextCoursesContainer />
-        <WhatYouWillLearnContainer />
-        {/* <CompaniesContainer /> */}
-        {/* <ContactFormContainer /> */}
-        {/* <OpinionsContainer /> */}
-      </div>
-      <FooterContainer />
-    </div>
-  );
-};
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  { path: "/cursos", element: <CoursesPage /> },
+]);
+
+const App = () => <RouterProvider router={router} />;
 
 export default App;

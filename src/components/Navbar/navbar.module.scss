@@ -33,13 +33,13 @@
   }
 
   @include tablet {
-    background: $black;
-
     padding: 2rem 3rem;
   }
 
   &__logo {
     width: 8rem;
+    height: 2rem;
+    object-fit: contain;
 
     @include phone {
       order: -1;

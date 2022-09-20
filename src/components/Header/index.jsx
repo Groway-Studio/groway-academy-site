@@ -6,7 +6,7 @@ import TeamImage from "../../assets/team.svg";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <Navbar />
+      <Navbar className="navbar__container" />
 
       <div className={styles.header__content}>
         <div className={styles.header__description}>
@@ -16,11 +16,7 @@ const Header = () => {
           </h1>
         </div>
         <div className={styles.header__heroImage}>
-          <img
-            src={TeamImage}
-            alt="Groway.Studio"
-            draggable={false}
-          />
+          <img src={TeamImage} alt="Groway.Studio" draggable={false} />
         </div>
       </div>
     </header>

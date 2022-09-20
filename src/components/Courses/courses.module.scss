@@ -1,0 +1,57 @@
+@import "../../styles/styles.scss";
+
+.courses {
+  // &__container {
+  // }
+
+  &__form {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: calc(100% - 13.5rem) 12rem;
+
+    &_button {
+      background: #084887;
+      border-radius: 10px;
+      color: #fff;
+      border: none;
+      font-size: 1rem;
+      font-weight: 400;
+      width: 100%;
+    }
+
+    &_search {
+      position: relative;
+
+      &_logo,
+      &_select {
+        position: absolute;
+      }
+
+      &_logo {
+        left: 0.5rem;
+        top: 0.5rem;
+      }
+
+      &_select,
+      &_input {
+        font-size: 1rem;
+        border: none;
+        outline: none;
+      }
+
+      &_select {
+        background: #b0bec5;
+        border-radius: 0px 10px 10px 0px;
+        padding: 0.3rem;
+        right: 0;
+      }
+
+      &_input {
+        background: #e0e0e0;
+        border-radius: 10px;
+        padding: 0.3rem 0.3rem 0.3rem 2.2rem;
+        width: 100%;
+      }
+    }
+  }
+}

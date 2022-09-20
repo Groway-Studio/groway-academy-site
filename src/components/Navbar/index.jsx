@@ -3,7 +3,7 @@ import styles from "./navbar.module.scss";
 
 import GrowayLogo from "../../assets/groway.svg";
 
-const Navbar = () => {
+const Navbar = ({ className }) => {
   const [show, setShow] = useState(false);
   const [width, setWidth] = useState(0);
 
@@ -18,7 +18,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={styles.navbar__container}>
+    <div className={className}>
       <nav className={styles.navbar}>
         <input
           type="checkbox"

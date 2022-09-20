@@ -216,11 +216,11 @@
       transition: all 0.3s ease;
       width: 200px;
 
-      &:hover {
-        border-color: $blue-3;
-        background: none;
-        color: $blue-3;
-      }
+      // &:hover {
+      //   border-color: $blue-3;
+      //   background: transparent;
+      //   color: $blue-3;
+      // }
 
       @include phone {
         padding: 0.3rem 2rem;
