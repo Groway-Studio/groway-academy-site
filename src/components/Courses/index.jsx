@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 import { courses, courses_categories } from "../../data";
 import loupe from "../../assets/loupe.svg";
 
@@ -53,7 +51,3 @@ const Courses = ({ state }) => {
 };
 
 export default Courses;
-
-Courses.propTypes = {
-  state: PropTypes.object.isRequired,
-};
