@@ -1,9 +1,11 @@
-import { courses_by_category } from "../../data";
+import PropTypes from "prop-types";
+
+import { courses, courses_categories } from "../../data";
 import loupe from "../../assets/loupe.svg";
 
 import styles from "./courses.module.scss";
 
-const Courses = () => {
+const Courses = ({ state }) => {
   return (
     <div className={styles.courses__container}>
       <form className={styles.courses__form}>
@@ -21,7 +23,7 @@ const Courses = () => {
             id="categories"
             className={styles.courses__form_search_select}
           >
-            {courses_by_category.map(({ title, value }) => (
+            {courses_categories.map(({ title, value }) => (
               <option key={value} value={value}>
                 {title}
               </option>
@@ -36,9 +38,22 @@ const Courses = () => {
         />
       </form>
 
-      <div className={styles.courses__results}></div>
+      <div className={styles.courses__results}>
+        {courses.map(({ image, title, description }) => (
+          <div key={title} className={styles.courses__results_item}>
+            <img src={image} alt={title} draggable={false} />
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <button>Más Info</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
 export default Courses;
+
+Courses.propTypes = {
+  state: PropTypes.object.isRequired,
+};
