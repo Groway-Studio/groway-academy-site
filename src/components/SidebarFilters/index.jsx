@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 import { filtersData } from "../../data";
 
 import styles from "./sidebar_filters.module.scss";
@@ -82,7 +80,3 @@ const SidebarFilters = ({ setState }) => {
 };
 
 export default SidebarFilters;
-
-SidebarFilters.propTypes = {
-  setState: PropTypes.func.isRequired,
-};
