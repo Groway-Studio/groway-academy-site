@@ -35,10 +35,10 @@ export const filtersData = [
     title: "Precio",
     options: ["$0 - $30", "$30 - $60", "$60 - $100", "+ $100"],
   },
-  { title: "Tecnología", options: ["Python", "JavaScript", "PHP"] },
+  { title: "Tecnología", options: ["Python", "JavaScript", "PHP", "Git"] },
 ];
 
-export const courses_by_category = [
+export const courses_categories = [
   {
     title: "Todas las categorías",
     value: "",
@@ -53,6 +53,49 @@ export const courses_by_category = [
   },
   {
     title: "Webinar",
-    value: "webminar",
+    value: "webinar",
+  },
+];
+
+import python from "../assets/next-courses/python.svg";
+import git from "../assets/git.png";
+import database from "../assets/database.jpg";
+import interview from "../assets/interview.jpeg";
+
+export const courses = [
+  {
+    id: 1,
+    title: "Python de 0 a Experto",
+    description: "Lorem Ipsum",
+    category: "curso",
+    technology: "Python",
+    level: "Principiante",
+    image: python,
+  },
+  {
+    id: 2,
+    title: "Diseño y administración de base de datos",
+    description: "Lorem Ipsum",
+    category: "bo",
+    technology: "Python",
+    level: "Principiante",
+    image: database,
+  },
+  {
+    id: 3,
+    title: "Git de 0 a experto",
+    description: "Lorem Ipsum",
+    category: "curso",
+    technology: "Git",
+    level: "Principiante",
+    image: git,
+  },
+  {
+    id: 4,
+    title: "Preparación para entrevistas técnicas",
+    description: "Lorem Ipsum",
+    category: "webinar",
+    technology: "Python",
+    image: interview,
   },
 ];
