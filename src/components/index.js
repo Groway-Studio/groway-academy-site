@@ -2,6 +2,7 @@ import Companies from "./Companies";
 import ContactForm from "./ContactForm";
 import Courses from "./Courses";
 import Footer from "./Footer";
+import FormRegister from "./FormRegister";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import NextCourses from "./NextCourses";
@@ -15,6 +16,7 @@ export {
   ContactForm,
   Courses,
   Footer,
+  FormRegister,
   Header,
   Navbar,
   NextCourses,

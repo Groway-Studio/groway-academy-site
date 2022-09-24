@@ -3,7 +3,7 @@ import styles from "./what_you_will_learn_container.module.scss";
 
 const WhatYouWillLearnContainer = () => {
   return (
-    <section className={styles.what_you_will_learn_container}>
+    <section id="tecnologias" className={styles.what_you_will_learn_container}>
       <WhatYouWillLearn />
     </section>
   );

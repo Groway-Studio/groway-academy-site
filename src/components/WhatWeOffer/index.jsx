@@ -6,7 +6,7 @@ import CertificationIllustration from "../../assets/what-we-offer/certification.
 
 const WhatWeOffer = () => {
   return (
-    <section className={styles.what_we_offer} id="servicios">
+    <section className={styles.what_we_offer}>
       <h2>
         ¿Qué te <span>ofrecemos?</span>
       </h2>

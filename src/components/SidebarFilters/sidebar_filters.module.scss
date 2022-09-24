@@ -8,13 +8,13 @@
   &__title {
     font-size: 1rem;
     font-weight: 400;
-    margin-left: 1rem;
-    margin: 0;
+    margin: 0 0 0 1rem;
+
     text-align: left;
   }
 
   &__form {
-    background: #e0e0e0;
+    background: #084887;
     border-radius: 10px;
     display: grid;
     gap: 0.5rem;
@@ -25,6 +25,7 @@
         font-size: 1rem;
         font-weight: 500;
         margin: 0;
+        color: $white;
       }
     }
 
@@ -36,6 +37,7 @@
 
       label {
         font-weight: 400;
+        color: $white;
       }
     }
   }
