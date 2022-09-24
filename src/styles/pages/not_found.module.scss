@@ -1,0 +1,34 @@
+@import "../styles.scss";
+
+.not_found {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 75vh;
+
+  @include tablet {
+    height: 80vh;
+  }
+
+  @include phone {
+    height: 90vh;
+  }
+
+  img {
+    max-width: 500px;
+    width: 70%;
+
+    @include phone {
+      width: 90%;
+      max-width: 334px;
+    }
+
+    @include tablet {
+      width: 50%;
+    }
+  }
+}
+
+.navbar__container {
+  background: #000;
+}
