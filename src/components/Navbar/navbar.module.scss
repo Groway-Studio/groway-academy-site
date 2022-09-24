@@ -27,7 +27,6 @@
   width: 90%;
 
   @include phone {
-    align-items: flex-start;
     max-width: 334px;
     padding: 1.5rem 0;
   }
@@ -124,13 +123,14 @@
     animation: myAnimation 0.1s linear 0s 1 normal forwards;
     background: $black;
     margin: 0;
-    max-width: 334px;
+    // max-width: 334px;
     position: absolute;
     text-align: center;
     top: 5rem;
     transition: all 0.5s cubic-bezier(0.26, 0.59, 0.83, 0.67);
     width: 100%;
     z-index: 200;
+    right: 0;
 
     li {
       display: flex;
@@ -158,10 +158,10 @@ input[type="checkbox"] {
 
 @keyframes myAnimation {
   0% {
-    transform: translateY(-1.5rem);
+    transform: translateY(-3rem);
   }
 
   100% {
-    transform: translateY(0);
+    transform: translateY(-0.5rem);
   }
 }
