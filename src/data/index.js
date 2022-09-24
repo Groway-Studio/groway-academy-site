@@ -40,7 +40,7 @@ export const filtersData = [
 
 export const courses_categories = [
   {
-    title: "Todas las categorías",
+    title: "Categorías",
     value: "",
   },
   {

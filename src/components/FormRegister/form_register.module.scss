@@ -1,0 +1,53 @@
+@import "../../styles/styles.scss";
+
+.form_register {
+  align-items: center;
+  border: 2px solid #e0e0e0;
+  display: grid;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: auto;
+  max-width: 400px;
+  padding: 1rem;
+  width: 90%;
+
+  @include phone {
+    max-width: 334px;
+    margin: 2rem auto;
+
+    width: 100%;
+  }
+
+  h2 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+
+  &__form_group {
+    label {
+      display: block;
+      padding: 0 0.4rem 0.1rem 0.4rem;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.4rem;
+      border-radius: 10px;
+      border: none;
+      background: #e0e0e0;
+    }
+  }
+
+  input[type="submit"] {
+    background: #084887;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0.4rem 0;
+  }
+}

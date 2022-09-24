@@ -25,13 +25,13 @@
     gap: 0.4rem;
 
     @include phone {
-      grid-template-rows: 12.5rem 4rem auto;
+      grid-template-rows: 12.5rem auto auto;
       gap: 0;
     }
 
     &:nth-of-type(2) {
       @include phone {
-        grid-template-rows: 12.5rem 3rem 10rem;
+        grid-template-rows: 12.5rem 3rem auto;
       }
 
       @include tablet {
@@ -41,7 +41,7 @@
 
     &:last-of-type {
       @include phone {
-        grid-template-rows: 12.5rem 3rem 10rem;
+        grid-template-rows: 12.5rem 3rem auto;
       }
 
       @include tablet {
@@ -78,7 +78,7 @@
   }
 
   @include phone {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     gap: 1.5rem;
   }
 
@@ -91,7 +91,6 @@
   h3 {
     @include flex_center;
     color: $gray-dark;
-    // align-items: flex-end;
     font-size: 2rem;
     line-height: 1.8rem;
 
@@ -107,7 +106,7 @@
 
   p {
     color: $blue-3;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 300;
     width: 75%;
 

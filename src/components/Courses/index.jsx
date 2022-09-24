@@ -1,12 +1,23 @@
+import { useState } from "react";
+
 import { courses, courses_categories } from "../../data";
 import loupe from "../../assets/loupe.svg";
 
 import styles from "./courses.module.scss";
 
 const Courses = ({ state }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [categories, setCategories] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+
+    console.log(state);
+  };
+
   return (
     <div className={styles.courses__container}>
-      <form className={styles.courses__form}>
+      <form className={styles.courses__form} onSubmit={handleSearch}>
         <div className={styles.courses__form_search}>
           <img
             src={loupe}
@@ -14,12 +25,19 @@ const Courses = ({ state }) => {
             draggable={false}
             className={styles.courses__form_search_logo}
           />
-          <input type="text" className={styles.courses__form_search_input} />
+          <input
+            type="text"
+            className={styles.courses__form_search_input}
+            value={searchTerm}
+            onChange={({ target }) => setSearchTerm(target.value)}
+          />
 
           <select
             name="categories"
             id="categories"
             className={styles.courses__form_search_select}
+            value={categories}
+            onChange={({ target }) => setCategories(target.value)}
           >
             {courses_categories.map(({ title, value }) => (
               <option key={value} value={value}>

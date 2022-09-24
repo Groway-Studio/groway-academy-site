@@ -1,0 +1,17 @@
+@import "../styles.scss";
+
+.register {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background: #000;
+}
+
+.container {
+  width: 90%;
+  max-width: 1024px;
+  margin: auto;
+}

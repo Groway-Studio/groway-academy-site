@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+
 import styles from "./navbar.module.scss";
 
 import GrowayLogo from "../../assets/groway.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ className }) => {
   const [show, setShow] = useState(false);
@@ -32,9 +34,9 @@ const Navbar = ({ className }) => {
           <div className={styles.navbar__burger_line}></div>
         </label>
 
-        <div className={styles.navbar__logo}>
+        <Link to={"/"} className={styles.navbar__logo}>
           <img src={GrowayLogo} alt="Groway Studio" draggable={false} />
-        </div>
+        </Link>
         <ul
           className={`${styles.navbar__options} ${
             show && width < 600 ? styles.navbar__show : ""
@@ -42,16 +44,21 @@ const Navbar = ({ className }) => {
           onClick={() => setShow(!show)}
         >
           <li className={styles.navbar__options_item}>
-            <a href="#">Inicio</a>
-          </li>
-          <li className={styles.navbar__options_item}>
             <a href="#servicios">Servicios</a>
           </li>
           <li className={styles.navbar__options_item}>
-            <a href="#">¿Quiénes Somos?</a>
+            <a href="#cursos">Cursos</a>
           </li>
           <li className={styles.navbar__options_item}>
-            <a href="#">Contáctanos</a>
+            <a href="#tecnologias">Tecnologías</a>
+          </li>
+          <li className={styles.navbar__options_item}>
+            <a
+              href="https://intranet.groway.academy/iniciar-sesion"
+              target={"_blank"}
+            >
+              Iniciar Sesión
+            </a>
           </li>
         </ul>
       </nav>
