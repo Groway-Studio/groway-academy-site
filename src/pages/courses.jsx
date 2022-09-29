@@ -18,7 +18,7 @@ const CoursesPage = () => {
       <div className={styles.container}>
         <div className={styles.container__content}>
           <SidebarFilters setState={setState} />
-          <Courses state={state} />
+          <Courses filters={state} />
         </div>
       </div>
       <FooterContainer className={styles.footer} />

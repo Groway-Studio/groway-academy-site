@@ -40,7 +40,7 @@ export const filtersData = [
 
 export const courses_categories = [
   {
-    title: "Categorías",
+    title: "- Categorías -",
     value: "",
   },
   {
@@ -71,15 +71,17 @@ export const courses = [
     technology: "Python",
     level: "Principiante",
     image: python,
+    price: 25,
   },
   {
     id: 2,
     title: "Diseño y administración de base de datos",
     description: "Lorem Ipsum",
-    category: "bo",
+    category: "bootcamp",
     technology: "Python",
-    level: "Principiante",
+    level: "Experimentado",
     image: database,
+    price: 50,
   },
   {
     id: 3,
@@ -89,6 +91,7 @@ export const courses = [
     technology: "Git",
     level: "Principiante",
     image: git,
+    price: 70,
   },
   {
     id: 4,
@@ -96,6 +99,8 @@ export const courses = [
     description: "Lorem Ipsum",
     category: "webinar",
     technology: "Python",
+    level: "Medio",
     image: interview,
+    price: 120,
   },
 ];
