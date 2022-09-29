@@ -5,42 +5,72 @@
     <link rel="shortcut icon" href="https://groway.academy/assets/favicon.7a02af90.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Groway Academy</title>
+
+    <meta name="title" content="Groway Academy" />
+    <meta name="description" content="Groway Academy" />
+    <meta name="keywords" content="groway academy, groway studio, groway" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://groway.academy" />
+    <meta property="og:site_name" content="groway.academy" />
+    <meta
+      property="article:publisher"
+      content="https://www.facebook.com/groway.studio"
+    />
+    <meta property="og:title" content="Groway Academy" />
+    <meta property="og:description" content="Groway Academy" />
+    <meta
+      property="og:image"
+      content="https://pbs.twimg.com/profile_images/1370866558369722375/Q-LELM5T_400x400.jpg"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://groway.academy" />
+
+    <meta property="twitter:title" content="Groway Academy" />
+    <meta property="twitter:description" content="Groway Academy" />
+    <meta
+      property="twitter:image"
+      content="https://pbs.twimg.com/profile_images/1370866558369722375/Q-LELM5T_400x400.jpg"
+    />
+    <meta name="twitter:creator" content="@growaystudio" />
     <script type="module" crossorigin src="https://groway.academy/assets/index.d745f09c.js"></script>
     <link rel="stylesheet" href="https://groway.academy/assets/index.a1344538.css">
   </head>
   <body>
     <div id="root"></div>
     
-    
+
     <!-- Messenger Plugin de chat Code -->
     <div id="fb-root"></div>
 
     <!-- Your Plugin de chat code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
 
     <script>
-      var chatbox = document.getElementById('fb-customer-chat');
+      var chatbox = document.getElementById("fb-customer-chat");
       chatbox.setAttribute("page_id", "100908402063121");
       chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
     <!-- Your SDK code -->
     <script>
-      window.fbAsyncInit = function() {
+      window.fbAsyncInit = function () {
         FB.init({
-          xfbml            : true,
-          version          : 'v14.0'
+          xfbml: true,
+          version: "v14.0",
         });
       };
 
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js";
         fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+      })(document, "script", "facebook-jssdk");
     </script>
   </body>
 </html>
