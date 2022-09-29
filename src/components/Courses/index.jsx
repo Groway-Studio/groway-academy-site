@@ -1,19 +1,90 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { courses, courses_categories } from "../../data";
 import loupe from "../../assets/loupe.svg";
 
 import styles from "./courses.module.scss";
 
-const Courses = ({ state }) => {
+const Courses = ({ filters }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [categories, setCategories] = useState("");
+
+  const [coursesFiltered, setCoursesFiltered] = useState([...courses]);
+
+  const { filterByLevel, filterByPrice, filterByTechnology } = filters;
+
+  console.log(filterByLevel, filterByPrice, filterByTechnology);
 
   const handleSearch = (e) => {
     e.preventDefault();
 
-    console.log(state);
+    if (searchTerm.trim() !== "") {
+      const regex = new RegExp(`${searchTerm}`, "i");
+
+      const courses = coursesFiltered.filter((course) =>
+        regex.test(course.title)
+      );
+
+      setCoursesFiltered(courses);
+    } else if (searchTerm.trim() !== "" && categories !== "") {
+      const filteredByCategory = courses.filter(
+        (course) => course.category === categories
+      );
+
+      setCoursesFiltered(filteredByCategory);
+    }
+
+    // console.log(state);
+    // console.log(searchTerm);
   };
+
+  useEffect(() => {
+    if (categories !== "") {
+      const coursesFilteredByCategory = courses.filter(
+        (course) => course.category === categories
+      );
+
+      setCoursesFiltered(coursesFilteredByCategory);
+
+      if (searchTerm.trim() !== "") {
+        console.log("hola");
+        const regex = new RegExp(`${searchTerm}`, "i");
+
+        const courses = coursesFiltered
+          .filter((course) => regex.test(course.title))
+          .filter((course) => course.category === categories);
+
+        setCoursesFiltered(courses);
+      }
+    } else {
+      setCoursesFiltered(courses);
+    }
+  }, [categories]);
+
+  const handleInputChange = ({ target }) => {
+    setSearchTerm(target.value);
+  };
+
+  useEffect(() => {
+    if (filterByLevel.length > 0) {
+      const courses = filterByLevel.map((level) => {
+        console.log(level);
+        return coursesFiltered.filter((course) => course.level === level);
+      });
+
+      console.log(courses.flat());
+    }
+  }, [filterByLevel]);
+
+  // useEffect(() => {
+  //   if (filterByPrice.length > 0) {
+  //     const courses = coursesFiltered.filter(
+  //       (course, index) => course.level === filterByPrice[index]
+  //     );
+
+  //     console.log(courses);
+  //   }
+  // }, [filterByPrice]);
 
   return (
     <div className={styles.courses__container}>
@@ -29,7 +100,7 @@ const Courses = ({ state }) => {
             type="text"
             className={styles.courses__form_search_input}
             value={searchTerm}
-            onChange={({ target }) => setSearchTerm(target.value)}
+            onChange={handleInputChange}
           />
 
           <select
@@ -55,7 +126,8 @@ const Courses = ({ state }) => {
       </form>
 
       <div className={styles.courses__results}>
-        {courses.map(({ image, title, description }) => (
+        {coursesFiltered.length === 0 && <p>No se encontraron resultados</p>}
+        {coursesFiltered.map(({ image, title, description }) => (
           <div key={title} className={styles.courses__results_item}>
             <img src={image} alt={title} draggable={false} />
             <h3>{title}</h3>
