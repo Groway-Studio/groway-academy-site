@@ -35,7 +35,10 @@ export const filtersData = [
     title: "Precio",
     options: ["$0 - $30", "$30 - $60", "$60 - $100", "+ $100"],
   },
-  { title: "Tecnología", options: ["Python", "JavaScript", "PHP", "Git"] },
+  {
+    title: "Tecnología",
+    options: ["Python", "Bases de datos", "Git", "SCRUM"],
+  },
 ];
 
 export const courses_categories = [
@@ -78,7 +81,7 @@ export const courses = [
     title: "Diseño y administración de base de datos",
     description: "Lorem Ipsum",
     category: "bootcamp",
-    technology: "Python",
+    technology: "Bases de datos",
     level: "Experimentado",
     image: database,
     price: 50,
@@ -98,7 +101,7 @@ export const courses = [
     title: "Preparación para entrevistas técnicas",
     description: "Lorem Ipsum",
     category: "webinar",
-    technology: "Python",
+    technology: "SCRUM",
     level: "Medio",
     image: interview,
     price: 120,
