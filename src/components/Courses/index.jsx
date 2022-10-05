@@ -13,8 +13,6 @@ const Courses = ({ filters }) => {
 
   const { filterByLevel, filterByPrice, filterByTechnology } = filters;
 
-  console.log(filterByLevel, filterByPrice, filterByTechnology);
-
   const handleSearch = (e) => {
     e.preventDefault();
 
@@ -65,26 +63,55 @@ const Courses = ({ filters }) => {
     setSearchTerm(target.value);
   };
 
+  // const handleFilters = (filterBy, property) => {
+  //   if (filterBy.length > 0) {
+  //     const coursesFilteredBy = filterBy
+  //       .map((property) =>
+  //         courses.filter((course) => course[property] === property)
+  //       )
+  //       .flat();
+
+  //     setCoursesFiltered(coursesFilteredBy);
+  //   } else {
+  //     setCoursesFiltered(courses);
+  //   }
+  // };
+
   useEffect(() => {
     if (filterByLevel.length > 0) {
-      const courses = filterByLevel.map((level) => {
-        console.log(level);
-        return coursesFiltered.filter((course) => course.level === level);
-      });
+      const coursesByLevel = filterByLevel
+        .map((level) => courses.filter((course) => course.level === level))
+        .flat();
 
-      console.log(courses.flat());
+      setCoursesFiltered(coursesByLevel);
+    } else {
+      setCoursesFiltered(courses);
     }
   }, [filterByLevel]);
 
-  // useEffect(() => {
-  //   if (filterByPrice.length > 0) {
-  //     const courses = coursesFiltered.filter(
-  //       (course, index) => course.level === filterByPrice[index]
-  //     );
+  useEffect(() => {
+    if (filterByPrice.length > 0) {
+      const coursesByPrice = filterByPrice
+        .map((price) => courses.filter((course) => course.price === price))
+        .flat();
 
-  //     console.log(courses);
-  //   }
-  // }, [filterByPrice]);
+      setCoursesFiltered(coursesByPrice);
+    } else {
+      setCoursesFiltered(courses);
+    }
+  }, [filterByPrice]);
+
+  useEffect(() => {
+    if (filterByTechnology.length > 0) {
+      const coursesByTech = filterByTechnology
+        .map((tech) => courses.filter((course) => course.technology === tech))
+        .flat();
+
+      setCoursesFiltered(coursesByTech);
+    } else {
+      setCoursesFiltered(courses);
+    }
+  }, [filterByTechnology]);
 
   return (
     <div className={styles.courses__container}>

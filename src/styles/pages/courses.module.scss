@@ -3,22 +3,35 @@
 .courses {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+
   justify-content: space-between;
+  background: url("../../assets/header_background_2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+
+  @include phone {
+    height: 100%;
+    background: url("../../assets/header_background_phone.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @include tablet {
+    height: 100%;
+    background: url("../../assets/header_background_tablet.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
 .navbar {
-  background-image: url("../../assets/header_background_2.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: 0 -1rem;
-  height: 20rem;
-  position: fixed;
+  background-repeat: no-repeat;
   width: 100%;
   z-index: 200;
 
   @include phone {
-    background-position: 0 -11rem;
   }
 
   @include tablet {
@@ -30,18 +43,38 @@
   @include base;
   align-items: center;
   display: grid;
-  height: 100vh;
+  margin: 2rem auto 3rem;
+  z-index: 0;
+
+  @include tablet {
+    height: 100%;
+    margin: 5rem auto 3rem;
+  }
+
+  @include phone {
+    align-items: flex-start;
+    margin: 5rem auto 3rem;
+    min-height: 50vh;
+  }
 
   &__content {
     display: grid;
     gap: 1rem;
     grid-template-columns: 15rem calc(100% - 16rem);
     z-index: 400;
+
+    @include tablet {
+      grid-template-columns: 12rem calc(100% - 12rem);
+    }
+
+    @include phone {
+      grid-template-columns: 100%;
+      max-width: 334px;
+    }
   }
 }
 
 .footer {
-  position: absolute;
   width: 100%;
   z-index: 100;
 }

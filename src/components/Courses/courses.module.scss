@@ -3,7 +3,6 @@
 .courses {
   &__container {
     display: flex;
-
     flex-direction: column;
     gap: 1rem;
   }
@@ -13,6 +12,16 @@
     gap: 1.5rem;
     grid-template-columns: calc(100% - 13.5rem) 12rem;
 
+    @include phone {
+      gap: 0.2rem;
+      grid-template-columns: calc(100% - 4.7rem) 4.5rem;
+    }
+
+    @include tablet {
+      gap: 0.3rem;
+      grid-template-columns: calc(100% - 5.3rem) 5rem;
+    }
+
     &_button {
       background: #084887;
       border-radius: 10px;
@@ -21,6 +30,10 @@
       font-size: 1rem;
       font-weight: 400;
       width: 100%;
+
+      @include phone {
+        font-size: 0.9rem;
+      }
     }
 
     &_search {
@@ -48,6 +61,11 @@
         border-radius: 0px 10px 10px 0px;
         padding: 0.3rem;
         right: 0;
+        height: 100%;
+
+        @include phone {
+          font-size: 0.85rem;
+        }
       }
 
       &_input {
@@ -55,29 +73,49 @@
         border-radius: 10px;
         padding: 0.3rem 9.5rem 0.3rem 2.2rem;
         width: 100%;
+
+        @include phone {
+          padding-right: 8.3rem;
+        }
       }
     }
   }
 
   &__results {
-    max-height: 25rem;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(3, calc(33% - 0.25rem));
+    height: 25rem;
     overflow-y: scroll;
 
+    @include phone {
+      grid-template-columns: repeat(2, calc(50% - 0.5rem));
+      overflow: hidden;
+      height: unset;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(2, calc(50% - 0.25rem));
+    }
+
     &_item {
+      height: 17rem;
       align-items: center;
       background: #d9d9d9;
       display: grid;
-      grid-template-rows: 9rem 4rem 1.5rem auto;
+      grid-template-rows: 9rem 5rem 1.5rem 1.5rem;
       text-align: center;
       border-radius: 0 0 10px 10px;
       overflow: hidden;
+
+      @include phone {
+        grid-template-rows: 9rem 3.7rem 1.6rem 2rem;
+        height: 16rem;
+      }
     }
 
-    display: grid;
-    gap: 0.5rem;
-    grid-template-columns: repeat(3, calc(33% - 0.2rem));
-
     img {
+      border: 1px solid #d9d9d9;
       height: 9rem;
       object-fit: cover;
       width: 100%;
@@ -91,16 +129,29 @@
 
     h3 {
       font-size: 1.1rem;
-      line-height: 1.5rem;
+      line-height: 1.3rem;
       font-weight: 700;
       width: 95%;
       margin: auto;
+
+      @include phone {
+        font-size: 1rem;
+        line-height: 1rem;
+      }
+
+      @include tablet {
+        font-size: 1rem;
+      }
     }
 
     p {
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 400;
-      margin-bottom: 1rem;
+      margin-bottom: 0.6rem;
+
+      @include phone {
+        margin-bottom: 0;
+      }
     }
 
     button {
@@ -111,6 +162,14 @@
       font-size: 1.1rem;
       font-weight: 500;
       padding: 0.2rem 0;
+
+      @include phone {
+        font-size: 0.9rem;
+      }
+
+      @include tablet {
+        font-size: 1rem;
+      }
     }
   }
 }
