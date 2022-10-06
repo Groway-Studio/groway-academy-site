@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./navbar.module.scss";
 
 import GrowayLogo from "../../assets/groway.svg";
-import { Link } from "react-router-dom";
 
 const Navbar = ({ className }) => {
   const [show, setShow] = useState(false);

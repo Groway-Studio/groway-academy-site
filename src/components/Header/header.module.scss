@@ -5,25 +5,15 @@
   background-size: contain;
   flex-direction: column;
   height: 100vh;
-  background-position-y: 7rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: relative;
 
-  @include desktop_hd {
-    background-position-y: -90px;
-  }
-
-  @include tablet {
-    background-position-y: 25rem;
-  }
-
   @include phone {
     background: url("../../assets/header_background_mobile.svg") no-repeat;
     background-size: contain;
     height: 100%;
-    background-position-y: 13rem;
   }
 
   &__heroImage {

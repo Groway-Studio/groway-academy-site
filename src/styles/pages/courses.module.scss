@@ -3,12 +3,11 @@
 .courses {
   display: flex;
   flex-direction: column;
-
   justify-content: space-between;
   background: url("../../assets/header_background_2.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  min-height: 100vh;
+  height: 120vh;
 
   @include phone {
     height: 100%;
@@ -31,9 +30,6 @@
   width: 100%;
   z-index: 200;
 
-  @include phone {
-  }
-
   @include tablet {
     background-position: 0 -3rem;
   }
@@ -48,7 +44,7 @@
 
   @include tablet {
     height: 100%;
-    margin: 5rem auto 3rem;
+    margin: 5rem auto 9rem;
   }
 
   @include phone {
@@ -69,6 +65,7 @@
 
     @include phone {
       grid-template-columns: 100%;
+      gap: 0;
       max-width: 334px;
     }
   }

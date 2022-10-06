@@ -122,6 +122,7 @@ const Courses = ({ filters }) => {
             alt="loupe"
             draggable={false}
             className={styles.courses__form_search_logo}
+            onClick={handleSearch}
           />
           <input
             type="text"

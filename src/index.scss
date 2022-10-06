@@ -42,17 +42,7 @@ a {
 }
 
 .navbar__container {
-  background: $black;
-  height: 10rem;
   position: absolute;
   top: 0;
   width: 100%;
-
-  @include phone {
-    height: 15rem;
-  }
-
-  @include tablet {
-    height: 25rem;
-  }
 }
