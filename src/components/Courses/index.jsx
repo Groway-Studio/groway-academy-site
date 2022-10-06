@@ -226,14 +226,30 @@ const Courses = ({ filters }) => {
         {coursesFiltered.flat().length === 0 && (
           <p>No se encontraron resultados</p>
         )}
-        {coursesFiltered.flat().map(({ image, title, description }) => (
-          <div key={title} className={styles.courses__results_item}>
-            <img src={image} alt={title} draggable={false} />
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <button>Más Info</button>
-          </div>
-        ))}
+        {coursesFiltered
+          .flat()
+          .map(({ image, title, description, price, stars }) => (
+            <div key={title} className={styles.courses__results_item}>
+              <img src={image} alt={title} draggable={false} />
+              <h3>{title}</h3>
+              <p>{description}</p>
+
+              <small>
+                <div>
+                  {stars.map((star, index) => (
+                    <img
+                      key={index}
+                      src={star}
+                      alt={title}
+                      style={{ width: "1.2rem", height: "1.2rem" }}
+                    />
+                  ))}
+                </div>
+                ${price}
+              </small>
+              <button>Más Info</button>
+            </div>
+          ))}
       </div>
     </div>
   );
