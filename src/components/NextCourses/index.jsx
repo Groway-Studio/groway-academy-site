@@ -30,7 +30,9 @@ const NextCourses = () => {
           <div>
             <h4>Próximamente</h4>
           </div>
+
           <h2></h2>
+          <span></span>
           <span></span>
           <span></span>
           <span></span>

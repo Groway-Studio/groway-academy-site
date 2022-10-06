@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { courses, courses_categories } from "../../data";
+import { courses, courses_categories, filtersData } from "../../data";
 import loupe from "../../assets/loupe.svg";
 
 import styles from "./courses.module.scss";
@@ -16,39 +16,35 @@ const Courses = ({ filters }) => {
   const handleSearch = (e) => {
     e.preventDefault();
 
-    if (searchTerm.trim() !== "") {
-      const regex = new RegExp(`${searchTerm}`, "i");
+    const regex = new RegExp(`${searchTerm}`, "i");
 
-      const courses = coursesFiltered.filter((course) =>
-        regex.test(course.title)
-      );
+    if (searchTerm.trim() !== "" && categories.trim() === "") {
+      const courses = coursesFilter()
+        .flat()
+        .filter((course) => regex.test(course.title));
 
       setCoursesFiltered(courses);
     } else if (searchTerm.trim() !== "" && categories !== "") {
-      const filteredByCategory = courses.filter(
-        (course) => course.category === categories
-      );
+      const filteredByCategory = coursesFilter()
+        .flat()
+        .filter((course) => course.category === categories)
+        .filter((course) => regex.test(course.title));
 
       setCoursesFiltered(filteredByCategory);
     }
-
-    // console.log(state);
-    // console.log(searchTerm);
   };
 
   useEffect(() => {
     if (categories !== "") {
-      const coursesFilteredByCategory = courses.filter(
-        (course) => course.category === categories
-      );
+      const coursesFilteredByCategory = coursesFilter()
+        .flat()
+        .filter((course) => course.category === categories);
 
       setCoursesFiltered(coursesFilteredByCategory);
-
       if (searchTerm.trim() !== "") {
-        console.log("hola");
         const regex = new RegExp(`${searchTerm}`, "i");
-
-        const courses = coursesFiltered
+        const courses = coursesFilter()
+          .flat()
           .filter((course) => regex.test(course.title))
           .filter((course) => course.category === categories);
 
@@ -63,55 +59,128 @@ const Courses = ({ filters }) => {
     setSearchTerm(target.value);
   };
 
-  // const handleFilters = (filterBy, property) => {
-  //   if (filterBy.length > 0) {
-  //     const coursesFilteredBy = filterBy
-  //       .map((property) =>
-  //         courses.filter((course) => course[property] === property)
-  //       )
-  //       .flat();
+  useEffect(() => {
+    const regex = new RegExp(`${searchTerm}`, "i");
 
-  //     setCoursesFiltered(coursesFilteredBy);
-  //   } else {
-  //     setCoursesFiltered(courses);
-  //   }
-  // };
+    if (searchTerm.trim() === "" && categories.trim() === "") {
+      setCoursesFiltered(coursesFilter().flat());
+    } else if (searchTerm.trim() !== "" && categories.trim() === "") {
+      setCoursesFiltered(
+        coursesFilter()
+          .flat()
+          .filter((course) => regex.test(course.title))
+      );
+    } else {
+      setCoursesFiltered(
+        coursesFilter()
+          .flat()
+          .filter((course) => regex.test(course.title))
+          .filter((course) => course.category === categories)
+      );
+    }
+  }, [filterByLevel, filterByPrice, filterByTechnology]);
+
+  const filterPrices = () => {
+    const filter = filterByPrice
+      .map((price) =>
+        filtersData[1].options.findIndex((pricesRange) => pricesRange === price)
+      )
+      .map((index) => {
+        return index === 0
+          ? courses.filter((course) => course.price > 0 && course.price <= 30)
+          : index === 1
+          ? courses.filter((course) => course.price >= 30 && course.price <= 60)
+          : index === 2
+          ? courses.filter(
+              (course) => course.price >= 60 && course.price <= 100
+            )
+          : index === 3
+          ? courses.filter((course) => course.price > 100)
+          : null;
+      })
+      .flat();
+
+    return filter;
+  };
 
   useEffect(() => {
-    if (filterByLevel.length > 0) {
-      const coursesByLevel = filterByLevel
-        .map((level) => courses.filter((course) => course.level === level))
-        .flat();
-
-      setCoursesFiltered(coursesByLevel);
-    } else {
+    if (
+      searchTerm.trim("") === "" &&
+      categories.trim() === "" &&
+      filterByLevel.length === 0 &&
+      filterByPrice.length === 0 &&
+      filterByTechnology.length === 0
+    ) {
       setCoursesFiltered(courses);
     }
-  }, [filterByLevel]);
+  }, [
+    searchTerm,
+    categories,
+    filterByLevel,
+    filterByPrice,
+    filterByTechnology,
+  ]);
 
-  useEffect(() => {
-    if (filterByPrice.length > 0) {
-      const coursesByPrice = filterByPrice
-        .map((price) => courses.filter((course) => course.price === price))
-        .flat();
+  const coursesFilter = () => {
+    return filterByLevel.length > 0 &&
+      filterByPrice.length > 0 &&
+      filterByTechnology.length > 0
+      ? filterByLevel
+          .map((level) =>
+            filterByTechnology.map((tech) =>
+              filterPrices().filter(
+                (course) => course.level === level && course.technology === tech
+              )
+            )
+          )
+          .flat()
+      : filterByLevel.length > 0 &&
+        filterByPrice.length > 0 &&
+        filterByTechnology.length === 0
+      ? filterByLevel
+          .map((level) =>
+            filterPrices().filter((course) => course.level === level)
+          )
+          .flat()
+      : filterByLevel.length > 0 &&
+        filterByPrice.length === 0 &&
+        filterByTechnology.length === 0
+      ? filterByLevel
+          .map((level) => courses.filter((course) => course.level === level))
+          .flat()
+      : filterByLevel.length > 0 &&
+        filterByPrice.length === 0 &&
+        filterByTechnology.length > 0
+      ? filterByLevel
+          .map((level) =>
+            filterByTechnology.map((tech) =>
+              courses.filter(
+                (course) => course.level === level && course.technology === tech
+              )
+            )
+          )
+          .flat()
+      : filterByLevel.length === 0 &&
+        filterByPrice.length > 0 &&
+        filterByTechnology.length > 0
+      ? filterByTechnology
+          .map((tech) =>
+            filterPrices().filter((course) => course.technology === tech)
+          )
 
-      setCoursesFiltered(coursesByPrice);
-    } else {
-      setCoursesFiltered(courses);
-    }
-  }, [filterByPrice]);
-
-  useEffect(() => {
-    if (filterByTechnology.length > 0) {
-      const coursesByTech = filterByTechnology
-        .map((tech) => courses.filter((course) => course.technology === tech))
-        .flat();
-
-      setCoursesFiltered(coursesByTech);
-    } else {
-      setCoursesFiltered(courses);
-    }
-  }, [filterByTechnology]);
+          .flat()
+      : filterByLevel.length === 0 &&
+        filterByPrice.length > 0 &&
+        filterByTechnology.length === 0
+      ? filterPrices()
+      : filterByLevel.length === 0 &&
+        filterByPrice.length === 0 &&
+        filterByTechnology.length > 0
+      ? filterByTechnology
+          .map((tech) => courses.filter((course) => course.technology === tech))
+          .flat()
+      : courses;
+  };
 
   return (
     <div className={styles.courses__container}>
@@ -154,8 +223,10 @@ const Courses = ({ filters }) => {
       </form>
 
       <div className={styles.courses__results}>
-        {coursesFiltered.length === 0 && <p>No se encontraron resultados</p>}
-        {coursesFiltered.map(({ image, title, description }) => (
+        {coursesFiltered.flat().length === 0 && (
+          <p>No se encontraron resultados</p>
+        )}
+        {coursesFiltered.flat().map(({ image, title, description }) => (
           <div key={title} className={styles.courses__results_item}>
             <img src={image} alt={title} draggable={false} />
             <h3>{title}</h3>
