@@ -32,8 +32,9 @@ export const fakeCustomers = [
 export const filtersData = [
   { title: "Nivel", options: ["Principiante", "Medio", "Experimentado"] },
   {
-    title: "Precio",
+    title: "Precio (USD)",
     options: ["$0 - $30", "$30 - $60", "$60 - $100", "+ $100"],
+    ranges: [[0, 30], [30, 60], [60, 100], [100]],
   },
   {
     title: "Tecnología",

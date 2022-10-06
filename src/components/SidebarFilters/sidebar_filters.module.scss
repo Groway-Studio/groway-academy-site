@@ -24,6 +24,10 @@
       display: none;
     }
 
+    @include tablet {
+      width: 30rem;
+    }
+
     &_item {
       display: inline;
       font-size: 0.8rem;
