@@ -102,11 +102,11 @@ const SidebarFilters = ({ setFiltersState, filters }) => {
         <h2 className={styles.sidebar_filters__title}>Filtros</h2>
 
         <form className={styles.sidebar_filters__form}>
-          {filtersData.map(({ title, options, values }) => (
+          {filtersData.map(({ title, options }) => (
             <div key={title} className={styles.sidebar_filters__form_filter}>
               <h3>{title}</h3>
 
-              {options.map((option, index) => (
+              {options.map((option) => (
                 <div
                   key={option}
                   className={styles.sidebar_filters__form_group}
