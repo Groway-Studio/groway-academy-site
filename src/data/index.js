@@ -65,6 +65,7 @@ import python from "../assets/next-courses/python.svg";
 import git from "../assets/git.png";
 import database from "../assets/database.jpg";
 import interview from "../assets/interview.jpeg";
+import star from "../assets/star.svg";
 
 export const courses = [
   {
@@ -76,6 +77,7 @@ export const courses = [
     level: "Principiante",
     image: python,
     price: 25,
+    stars: [star, star, star, star, star],
   },
   {
     id: 2,
@@ -86,6 +88,7 @@ export const courses = [
     level: "Experimentado",
     image: database,
     price: 50,
+    stars: [star, star, star, star],
   },
   {
     id: 3,
@@ -96,6 +99,7 @@ export const courses = [
     level: "Principiante",
     image: git,
     price: 70,
+    stars: [star, star, star, star],
   },
   {
     id: 4,
@@ -106,5 +110,6 @@ export const courses = [
     level: "Medio",
     image: interview,
     price: 120,
+    stars: [star, star, star, star],
   },
 ];

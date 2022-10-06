@@ -100,19 +100,27 @@
     }
 
     &_item {
-      height: 17.3rem;
+      height: 19.6rem;
       align-items: center;
       background: #d9d9d9;
       display: grid;
-      grid-template-rows: 9rem 5rem 1.5rem 1.5rem;
+      grid-template-rows: 9rem 4.5rem 2rem 2rem 2rem;
       text-align: center;
       border-radius: 0 0 10px 10px;
       overflow: hidden;
 
       @include phone {
         grid-template-rows: 9rem 3.7rem 1.6rem 2rem;
-        height: 16rem;
+        height: 18rem;
       }
+    }
+
+    small {
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
     }
 
     img {
@@ -148,7 +156,6 @@
     p {
       font-size: 0.9rem;
       font-weight: 400;
-      margin-bottom: 0.6rem;
 
       @include phone {
         margin-bottom: 0;
