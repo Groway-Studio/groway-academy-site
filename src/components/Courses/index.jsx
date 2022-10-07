@@ -241,7 +241,7 @@ const Courses = ({ filters }) => {
                       key={index}
                       src={star}
                       alt={title}
-                      style={{ width: "1.2rem", height: "1.2rem" }}
+                      style={{ width: "1rem", height: "1rem" }}
                     />
                   ))}
                 </div>
