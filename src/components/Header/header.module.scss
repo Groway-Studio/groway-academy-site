@@ -53,15 +53,15 @@
     &_mainTitle {
       font-size: 1.9rem;
       font-weight: bold;
+      line-height: 2.5rem;
 
       @include phone {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
 
       @include tablet {
         width: 100%;
         font-size: 2rem;
-        margin-left: 2rem;
       }
     }
 
@@ -133,26 +133,26 @@
     display: grid;
     margin-top: 0;
     gap: 1rem;
-    grid-template-columns: calc(415px - 0.5rem) calc(100% - 415px - 0.5rem);
+    grid-template-columns: calc(450px - 0.5rem) calc(100% - 450px - 0.5rem);
     align-items: center;
     justify-content: center;
     max-width: 1024px;
     width: 90%;
 
     @include phone {
-      grid-template-rows: auto auto;
-      width: 85%;
       gap: 0;
-      margin: 15rem 0;
-      grid-template-columns: 1fr;
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto;
+      margin: 8rem 0;
       max-width: 334px;
+      width: 85%;
     }
 
     @include tablet {
-      grid-template-columns: 1fr;
-      width: 75%;
-      margin-top: 0;
       gap: 1rem;
+      grid-template-columns: 1fr;
+      margin-top: 0;
+      width: 75%;
     }
   }
 }
