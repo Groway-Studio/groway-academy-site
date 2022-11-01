@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import styles from "./navbar.module.scss";
 
@@ -44,13 +45,19 @@ const Navbar = ({ className }) => {
           onClick={() => setShow(!show)}
         >
           <li className={styles.navbar__options_item}>
-            <a href="#servicios">Servicios</a>
+            <HashLink smooth to="#servicios">
+              Servicios
+            </HashLink>
           </li>
           <li className={styles.navbar__options_item}>
-            <a href="#cursos">Cursos</a>
+            <HashLink smooth to="#cursos">
+              Cursos
+            </HashLink>
           </li>
           <li className={styles.navbar__options_item}>
-            <a href="#tecnologias">Tecnologías</a>
+            <HashLink smooth to="#tecnologias">
+              Tecnologías
+            </HashLink>
           </li>
           <li className={styles.navbar__options_item}>
             <a
