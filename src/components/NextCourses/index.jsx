@@ -42,7 +42,7 @@ const NextCourses = () => {
               .toString()}...`}</p>
 
             <a
-              href="https://aprendepython.groway.studio/?fbclid=IwAR1Rs5k041EjFUbJX87Y5k346B7sLUswVr08vrZazSGjoyxz1PiOPilPGIU"
+              href="${url}"
               target="_blank"
             >
               Más Info
